@@ -40,6 +40,8 @@ PRODUCT_PACKAGES += \
     WifiResCommon \
     WifiResTarget
 
+TARGET_INCLUDE_OLD_WALLPAPERS := true
+
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
