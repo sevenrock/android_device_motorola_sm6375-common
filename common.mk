@@ -36,6 +36,8 @@ PRODUCT_PACKAGES += \
     FrameworksResTarget \
     WifiResTarget
 
+TARGET_INCLUDE_OLD_WALLPAPERS := true
+
 # A/B
 ifeq ($(TARGET_IS_VAB),true)
 # Inherit virtual_ab_ota product
