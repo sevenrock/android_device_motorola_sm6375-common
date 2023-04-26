@@ -145,6 +145,9 @@ PRODUCT_PACKAGES += \
 # Charger
 WITH_LINEAGE_CHARGER := false
 
+# Dalvik
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
 # Device ID attestation
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
