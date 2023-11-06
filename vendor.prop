@@ -160,6 +160,7 @@ dalvik.vm.heapstartsize=16m
 dalvik.vm.heaptargetutilization=0.5
 
 # Display
+debug.sf.enable_transaction_tracing=false
 vendor.display.comp_mask=0
 vendor.display.disable_excl_rect=0
 vendor.display.disable_excl_rect_partial_fb=1
