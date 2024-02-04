@@ -80,6 +80,11 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -ni '/default.*fqname/!p' "${2}"
             ;;
+        vendor/etc/init/android.hardware.nfc@1.2-service.sec.rc)
+            [ "$2" = "" ] && return 0
+            sed -i "s/sec/samsung/g" "${2}"
+            sed -i "s/class hal/override\n    class hal/" "${2}"
+            ;;
         *)
             return 1
             ;;
