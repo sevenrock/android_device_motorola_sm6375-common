@@ -90,6 +90,10 @@ function blob_fixup() {
         vendor/lib64/libwvhidl.so)
             [ "$2" = "" ] && return 0
             grep -q libcrypto_shim.so "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+        vendor/etc/init/android.hardware.nfc@1.2-service.sec.rc)
+            [ "$2" = "" ] && return 0
+            sed -i "s/sec/samsung/g" "${2}"
+            sed -i "s/class hal/override\n    class hal/" "${2}"
             ;;
         *)
             return 1
