@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from dubai_g-user 14 U1RD34.80-40 f0ea3-81bef release-keys - RETAIL variant.
+# All unpinned blobs below are extracted from fogos_g-user 14 U1UG34.23-28-2 8dca85 release-keys.
 
 # ADSP
 vendor/bin/adsprpcd
@@ -129,6 +129,10 @@ vendor/lib/libmdsprpc.so
 vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libmdsprpc.so
+
+# CDFW
+vendor/lib64/libcdfw.so
+vendor/lib64/libcdfw_remote_api.so
 
 # Charger
 vendor/bin/charge_only_mode
