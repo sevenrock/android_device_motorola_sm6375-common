@@ -23,3 +23,17 @@ recovery_only(`
 ')
 
 allow init vendor_sysfs_vibrator:file create_file_perms;
+
+allow init debugfs_tracing_debug:dir mounton;
+allow init dnsmasq_exec:file getattr;
+allow init hidl_base_hwservice:hwservice_manager add;
+allow init hwservicemanager:binder { call transfer };
+allow init netutils_wrapper_exec:file getattr;
+allow init nfc:binder call;
+allow init rs_exec:file getattr;
+allow init runas_exec:file getattr;
+allow init sdcardd_exec:file getattr;
+allow init sgdisk_exec:file getattr;
+allow init simpleperf_app_runner_exec:file getattr;
+allow init tcpdump_exec:file getattr;
+allow init vold_prepare_subdirs_exec:file getattr;
