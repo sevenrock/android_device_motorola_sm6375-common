@@ -1,1 +1,12 @@
+get_prop(recovery, aac_drc_prop)
+get_prop(recovery, adaptive_haptics_prop)
+get_prop(recovery, adbd_config_prop)
+get_prop(recovery, apexd_config_prop)
 allow recovery pstorefs:dir r_dir_perms;
+allow recovery sysfs_devices_block:dir r_dir_perms;
+allow recovery sysfs_devices_block:file rw_file_perms;
+allow recovery sysfs_loop:dir r_dir_perms;
+allow recovery sysfs_loop:file rw_file_perms;
+allow recovery sysfs_zram:dir r_dir_perms;
+allow recovery sysfs_zram_uevent:file rw_file_perms;
+allow recovery vendor_sysfs_touchpanel:dir r_dir_perms;
