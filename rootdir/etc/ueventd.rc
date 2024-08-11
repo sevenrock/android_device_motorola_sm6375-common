@@ -134,6 +134,7 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/cvp*                 0660   system     camera
 /dev/media*               0660   system     camera
 /dev/v4l-subdev*          0660   system     camera
+/dev/cci_intf             0660   system     camera
 /dev/qseecom              0660   system     drmrpc
 /dev/qce                  0660   system     drmrpc
 /dev/smcinvoke            0660   system     drmrpc
@@ -174,8 +175,12 @@ firmware_directories /vendor/firmware_mnt/image/
 #qvr
 /dev/qvr_external_sensor_ioctl      0660  system  system
 /sys/kernel/qvr_external_sensor/fd  0660  system  system
-/dev/bus/usb/*                      0660  root    usb
-/dev/hidraw*                        0660  root    usb
+/dev/bus/usb/*                      0660  system  system
+/dev/hidraw*                        0660  system  system
+
+# Trustonic TEE device
+/dev/mobicore             0600   system     system
+/dev/mobicore-user        0666   system     system
 
 # wlan
 /dev/wcnss_wlan           0660   system     system
@@ -343,6 +348,10 @@ firmware_directories /vendor/firmware_mnt/image/
 # EgisTech fingerprint device
 /dev/esfp0                0660   system     system
 
+# FocalTech fingerprint device
+/dev/fpsensor             0660   system     system
+/dev/focaltech_fp         0664   system     system
+
 # Change permission for FPC fingerprint
 /sys/class/fingerprint/fpc1020 nav        0440     system    system
 /sys/class/fingerprint/fpc1020 irq        0440     system    system
@@ -380,6 +389,10 @@ firmware_directories /vendor/firmware_mnt/image/
 
 # Kmsg device
 /dev/kmsg                                               0620   root       system
+
+# change permission for some capsensor nodes
+/sys/class/sensors/Moto\ CapSense\ Ch*   enable       0660    root    input
+/sys/class/sensors/Moto\ CapSense\ Ch*   poll_delay   0660    root    input
 
 # LED class devices
 /sys/class/leds/red      delay_on     0640    system    system
