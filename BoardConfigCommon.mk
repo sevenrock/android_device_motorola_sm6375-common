@@ -6,7 +6,7 @@
 
 BOARD_VENDOR := motorola
 
-COMMON_PATH := device/motorola/sm7325-common
+COMMON_PATH := device/motorola/sm6375-common
 
 # Architecture
 TARGET_ARCH := arm64
@@ -47,12 +47,11 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_NO_GCC := true
-TARGET_KERNEL_SOURCE := kernel/motorola/sm7325
-TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig vendor/lineage_moto-lahaina.config
+TARGET_KERNEL_SOURCE := kernel/motorola/sm6375
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOARD_PLATFORM := lahaina
+TARGET_BOARD_PLATFORM := holi
 
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/fsg:/fsg
@@ -107,10 +106,6 @@ TARGET_ENABLE_MEDIADRM_64 := true
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
-
-# GPS
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
-LOC_HIDL_VERSION := 4.2
 
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(COMMON_PATH)/framework_manifest.xml
@@ -197,4 +192,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
-include vendor/motorola/sm7325-common/BoardConfigVendor.mk
+include vendor/motorola/sm6375-common/BoardConfigVendor.mk
