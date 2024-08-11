@@ -79,6 +79,8 @@ on fs
     chmod 0771 /mnt/vendor/persist
     restorecon_recursive /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
+    mkdir /mnt/vendor/persist/wlan 0700 system system
+    chmod 0700 /mnt/vendor/persist/wlan
 
 on post-fs
     # set RLIMIT_MEMLOCK to 64MB
@@ -89,8 +91,6 @@ on late-fs
 
 on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
-    # Enable WLAN cold boot calibration
-    write /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/fs_ready 1
 
 on early-boot
     start vendor.sensors
