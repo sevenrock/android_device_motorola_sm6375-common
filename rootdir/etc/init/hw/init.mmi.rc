@@ -53,8 +53,6 @@ on early-init
 
 on fs
     insmod /vendor/lib/modules/cci_intf.ko
-    mkdir /mnt/vendor/persist/fps 0770 system system
-    exec_start vendor.ident-fps-sh
 
 on fs && property:ro.vendor.hw.modem_version=*
     # Super modem detection
@@ -246,13 +244,6 @@ on post-fs-data
     # Imager tuning data for camera subsystem
     mkdir /data/vendor/misc/imager 0771 camera camera
 
-    # Required by FingerPrint Cards (FPC) via init so we don't need to give qseecomd or fingerprintd permissions to create them
-    mkdir /data/vendor/fpc 0700 system system
-    mkdir /data/vendor/.fps 0770 system vendor_fingerp
-
-    mkdir /data/vendor/focaltech  0770  system system
-    restorecon /data/vendor/focaltech
-
     # Required by touchRec for write the touch data
     mkdir /data/vendor/touchrec 0770 input input
     chown input input /data/vendor/touchrec/bootindex
@@ -357,12 +348,6 @@ service vendor.oem-super-image-detector-sh /vendor/bin/init.oem.hw.sh -M
     user root
     oneshot
     disabled
-
-service vendor.hal-fps-sh /vendor/bin/init.oem.fingerprint2.sh
-    class late_start
-    user root
-    group system
-    oneshot
 
 service vendor.touch-dead-sh /vendor/bin/init.oem.hw.sh -f
     class main
