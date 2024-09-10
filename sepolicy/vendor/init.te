@@ -31,7 +31,6 @@ allow init dnsmasq_exec:file getattr;
 allow init hidl_base_hwservice:hwservice_manager add;
 allow init hwservicemanager:binder { call transfer };
 allow init netutils_wrapper_exec:file getattr;
-allow init nfc:binder call;
 allow init rs_exec:file getattr;
 allow init runas_exec:file getattr;
 allow init sdcardd_exec:file getattr;
