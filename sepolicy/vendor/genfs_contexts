@@ -1,8 +1,3 @@
-# Fingerprint
-genfscon sysfs /devices/platform/egis_input                         u:object_r:vendor_sysfs_fingerprint:s0
-genfscon sysfs /devices/platform/egis_input/navigation_enable       u:object_r:vendor_sysfs_fingerprint:s0
-genfscon sysfs /devices/platform/egis_input/navigation_event        u:object_r:vendor_sysfs_fingerprint:s0
-
 # Misc Charger
 genfscon sysfs /devices/platform/soc/4c88000.i2c/i2c-1/1-002c u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4c88000.i2c/i2c-1/1-003b u:object_r:vendor_sysfs_battery_supply:s0
