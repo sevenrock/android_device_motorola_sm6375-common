@@ -96,6 +96,5 @@ get_prop(hal_camera_default, vendor_fm_radio_app_prop);
 get_prop(hal_camera_default, vendor_gpu_prop);
 get_prop(hal_camera_default, vendor_modem_diag_prop);
 get_prop(hal_camera_default, vendor_mot_fingerprint_prop);
-get_prop(hal_camera_default, vendor_mot_nfc_prop);
 get_prop(hal_camera_default, vendor_mot_touch_prop);
 get_prop(hal_camera_default, vendor_mpctl_prop);
