@@ -44,29 +44,6 @@
 /(mnt/vendor/persist|persist)/chargeonly(/.*)?          u:object_r:persist_chargeonly_file:s0
 /(vendor|system/vendor)/bin/charge_only_mode            u:object_r:charge_only_exec:s0
 
-# Fingerprint
-/(mnt/vendor/persist|persist)/egis(/.*)?                u:object_r:vendor_persist_egis_file:s0
-/(mnt/vendor/persist|persist)/fps(/.*)?                 u:object_r:vendor_persist_fps_file:s0
-/(vendor|system/vendor)/bin/egis_ident                  u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|system/vendor)/bin/fpc_ident                   u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|system/vendor)/bin/goodix_ident                u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.dubai           u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-ets              u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-focalservice             u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-fpc              u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.berlin          u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.berlna          u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.xpeng           u:object_r:hal_fingerprint_default_exec:s0
-/data/vendor/.fps(/.*)?                                 u:object_r:fingerprint_vendor_data_file:s0
-/data/vendor/egis(/.*)?                                 u:object_r:fingerprint_vendor_data_file:s0
-/data/vendor/focaltech(/.*)?                            u:object_r:fingerprint_vendor_data_file:s0
-/data/vendor/fpc(/.*)?                                  u:object_r:fingerprint_vendor_data_file:s0
-/data/vendor/gf_data(/.*)?                              u:object_r:fingerprint_vendor_data_file:s0
-/dev/esfp0                                              u:object_r:egis_device:s0
-/dev/focaltech_fp                                       u:object_r:focaltech_fp_device:s0
-/dev/goodix_fp                                          u:object_r:goodix_device:s0
-/sys/devices/soc/0.et320(/.*)?                          u:object_r:vendor_sysfs_fingerprint:s0
-
 # IFAA
 /(vendor|system/vendor)/bin/hw/vendor\.zui\.hardware\.ifaa@1\.0-service                 u:object_r:hal_ifaa_default_exec:s0
 
@@ -97,7 +74,6 @@
 /(vendor|system/vendor)/bin/load_touch\.sh                      u:object_r:vendor_qti_init_shell_exec:s0
 /(vendor|system/vendor)/bin/init\.mmi\.laser\.sh                u:object_r:vendor_mmi_laser_exec:s0
 /(vendor|system/vendor)/bin/init\.mmi\.touch\.sh                u:object_r:vendor_init_touch_exec:s0
-/(vendor|system/vendor)/bin/init\.oem\.(fingerprint2|fingerprint\.overlay)\.sh                    u:object_r:vendor_init_fingerprint_exec:s0
 /(vendor|system/vendor)/bin/init\.oem\.hw\.sh                   u:object_r:vendor_init_hw_exec:s0
 
 # V4L2 Name
