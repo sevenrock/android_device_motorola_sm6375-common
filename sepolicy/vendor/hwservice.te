@@ -1,0 +1,1 @@
+type hal_imagetuner_hwservice, hwservice_manager_type;
