@@ -1,0 +1,2 @@
+# Imgtuner
+motorola.hardware.camera.imgtuner::IImageTuning                      u:object_r:hal_imagetuner_hwservice:s0
